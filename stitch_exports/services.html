@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Services | NEXGRO - Full-Stack Growth Solutions</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;family=Inter:wght@400;500;600;700&amp;family=Bebas+Neue&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "inverse-primary": "#5a6400",
+              "error-container": "#93000a",
+              "tertiary-container": "#c6e9f0",
+              "surface-tint": "#bed100",
+              "surface-bright": "#393939",
+              "surface-container-high": "#2a2a2a",
+              "surface": "#131313",
+              "tertiary-fixed-dim": "#aaccd3",
+              "surface-container-low": "#1b1b1b",
+              "surface-container-highest": "#353535",
+              "on-surface": "#e2e2e2",
+              "surface-container": "#1f1f1f",
+              "primary-fixed-dim": "#bed100",
+              "secondary": "#c2ce61",
+              "secondary-fixed-dim": "#c2ce61",
+              "on-secondary": "#2e3300",
+              "primary-container": "#d9ef00",
+              "on-primary-container": "#606a00",
+              "outline-variant": "#464832",
+              "on-secondary-container": "#e4f17f",
+              "background": "#0A0A0A",
+              "primary-fixed": "#d9ef00",
+              "surface-container-lowest": "#0e0e0e",
+              "secondary-container": "#646e02",
+              "on-primary-fixed": "#1a1e00",
+              "secondary-fixed": "#deeb7a",
+              "primary": "#ffffff",
+              "inverse-on-surface": "#303030",
+              "surface-variant": "#353535",
+              "on-tertiary-fixed": "#001f24",
+              "on-tertiary-container": "#496a70",
+              "on-tertiary": "#13353b",
+              "on-tertiary-fixed-variant": "#2b4c51",
+              "on-secondary-fixed": "#1a1e00",
+              "on-error-container": "#ffdad6",
+              "on-error": "#690005",
+              "outline": "#919378",
+              "on-secondary-fixed-variant": "#434b00",
+              "tertiary": "#ffffff",
+              "surface-dim": "#131313",
+              "on-surface-variant": "#c7c9ab",
+              "inverse-surface": "#e2e2e2",
+              "on-primary-fixed-variant": "#434b00",
+              "on-background": "#e2e2e2",
+              "error": "#ffb4ab",
+              "on-primary": "#2e3300",
+              "tertiary-fixed": "#c6e9f0"
+            },
+            fontFamily: {
+              "headline": ["Bebas Neue", "sans-serif"],
+              "body": ["Manrope", "sans-serif"],
+              "label": ["Inter", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .particle-grid {
+        background-image: radial-gradient(rgba(232, 255, 0, 0.1) 1px, transparent 1px);
+        background-size: 40px 40px;
+      }
+      .glass-card {
+        background: rgba(42, 42, 42, 0.4);
+        backdrop-filter: blur(12px);
+      }
+    </style>
+</head>
+<body class="bg-background text-primary font-body selection:bg-primary-container selection:text-on-primary overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#0A0A0A]/90 backdrop-blur-md border-b border-white/5">
+<div class="flex justify-between items-center px-6 md:px-12 py-5 max-w-7xl mx-auto">
+<!-- Left: Brand -->
+<div class="text-2xl font-black tracking-tighter text-white uppercase">NEXGRO</div>
+<!-- Center: Navigation (Desktop) -->
+<div class="hidden md:flex gap-8 items-center absolute left-1/2 -translate-x-1/2">
+<a class="font-['Manrope'] uppercase tracking-widest text-[10px] font-bold text-white/70 hover:text-white transition-colors" href="#">Home</a>
+<a class="font-['Manrope'] uppercase tracking-widest text-[10px] font-bold text-[#E8FF00] transition-colors" href="#">Services</a>
+<a class="font-['Manrope'] uppercase tracking-widest text-[10px] font-bold text-white/70 hover:text-white transition-colors" href="#">Our Work</a>
+<a class="font-['Manrope'] uppercase tracking-widest text-[10px] font-bold text-white/70 hover:text-white transition-colors" href="#">Process</a>
+<a class="font-['Manrope'] uppercase tracking-widest text-[10px] font-bold text-white/70 hover:text-white transition-colors" href="#">Contact</a>
+</div>
+<!-- Right: CTA & Mobile Toggle -->
+<div class="flex items-center gap-4">
+<button class="hidden md:block bg-[#E8FF00] text-[#0A0A0A] font-['Manrope'] uppercase tracking-widest text-[10px] font-black px-6 py-3 rounded-sm hover:brightness-110 transition-all">
+                GET FREE AUDIT
+            </button>
+<button class="md:hidden text-white flex items-center">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+</div>
+</nav>
+<main class="relative">
+<!-- Hero Section -->
+<section class="relative min-h-[921px] flex flex-col items-center justify-center pt-32 pb-20 px-6 particle-grid overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-b from-transparent via-background/50 to-background pointer-events-none"></div>
+<div class="z-10 text-center max-w-4xl mx-auto">
+<span class="inline-block bg-primary-container/10 text-primary-container font-label text-[10px] font-bold uppercase tracking-[0.3em] px-4 py-1.5 rounded-full mb-8 border border-primary-container/20">
+                    What We Do
+                </span>
+<h1 class="font-headline text-7xl md:text-9xl text-white leading-none tracking-tight mb-8">
+                    Full-Stack <span class="text-primary-container">Growth</span> Solutions
+                </h1>
+<p class="font-body text-xl md:text-2xl text-on-surface-variant max-w-2xl mx-auto leading-relaxed opacity-80">
+                    Everything your D2C brand needs to grow — under one roof.
+                </p>
+</div>
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 opacity-20 animate-bounce">
+<span class="material-symbols-outlined text-4xl">keyboard_double_arrow_down</span>
+</div>
+</section>
+<!-- Service 1: Shopify -->
+<section class="py-32 px-6 bg-surface-container-low relative">
+<div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-20 items-center">
+<!-- Graphic -->
+<div class="relative group">
+<div class="absolute -inset-4 bg-primary-container/5 rounded-xl blur-2xl group-hover:bg-primary-container/10 transition-all duration-500"></div>
+<div class="relative aspect-square glass-card rounded-lg border border-outline-variant/10 flex items-center justify-center p-12">
+<div class="w-full h-full border-2 border-dashed border-primary-container/20 rounded-lg flex flex-col items-center justify-center gap-6">
+<span class="material-symbols-outlined text-8xl text-primary-container" style="font-variation-settings: 'FILL' 1;">shopping_cart</span>
+<div class="flex gap-2">
+<div class="h-2 w-12 bg-primary-container rounded-full"></div>
+<div class="h-2 w-4 bg-primary-container/30 rounded-full"></div>
+<div class="h-2 w-4 bg-primary-container/30 rounded-full"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Content -->
+<div class="space-y-8">
+<h2 class="font-headline text-5xl md:text-6xl text-white">Shopify Store Development</h2>
+<p class="text-on-surface-variant text-lg leading-relaxed">
+                        We build high-converting Shopify stores from scratch — mobile-first, fast-loading, and designed to sell.
+                    </p>
+<ul class="space-y-4">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-container text-xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-sm font-label uppercase tracking-wider text-on-surface/80">Custom theme design</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-container text-xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-sm font-label uppercase tracking-wider text-on-surface/80">Mobile-first layout</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-container text-xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-sm font-label uppercase tracking-wider text-on-surface/80">Shiprocket integration</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-container text-xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-sm font-label uppercase tracking-wider text-on-surface/80">Speed optimization</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-container text-xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-sm font-label uppercase tracking-wider text-on-surface/80">7-day delivery guarantee</span>
+</li>
+</ul>
+<button class="bg-primary-container text-on-primary font-label text-xs font-bold uppercase tracking-[0.2em] px-10 py-5 rounded-sm hover:translate-x-1 transition-transform shadow-[0_20px_40px_-10px_rgba(232,255,0,0.2)]">
+                        Start Your Store
+                    </button>
+</div>
+</div>
+</section>
+<!-- Service 2: Performance Marketing (Alternating) -->
+<section class="py-32 px-6 bg-background relative overflow-hidden">
+<div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-20 items-center">
+<!-- Content (Left) -->
+<div class="space-y-8 md:order-1 order-2">
+<h2 class="font-headline text-5xl md:text-6xl text-white">Performance Marketing</h2>
+<p class="text-on-surface-variant text-lg leading-relaxed">
+                        Data-driven Meta and Google Ads that actually scale. No guessing, just results.
+                    </p>
+<ul class="space-y-4">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-container text-xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-sm font-label uppercase tracking-wider text-on-surface/80">Meta Ads</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-container text-xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-sm font-label uppercase tracking-wider text-on-surface/80">Google Ads</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-container text-xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-sm font-label uppercase tracking-wider text-on-surface/80">Ad creative strategy</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-container text-xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-sm font-label uppercase tracking-wider text-on-surface/80">Weekly reports</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-container text-xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-sm font-label uppercase tracking-wider text-on-surface/80">Dedicated ads manager</span>
+</li>
+</ul>
+<button class="bg-primary-container text-on-primary font-label text-xs font-bold uppercase tracking-[0.2em] px-10 py-5 rounded-sm hover:translate-x-1 transition-transform shadow-[0_20px_40px_-10px_rgba(232,255,0,0.2)]">
+                        Scale With Ads
+                    </button>
+</div>
+<!-- Graphic (Right) -->
+<div class="relative group md:order-2 order-1">
+<div class="absolute -inset-4 bg-primary-container/5 rounded-xl blur-2xl group-hover:bg-primary-container/10 transition-all duration-500"></div>
+<div class="relative aspect-square glass-card rounded-lg border border-outline-variant/10 flex items-center justify-center p-12 overflow-hidden">
+<div class="relative w-full h-full">
+<div class="absolute inset-0 flex items-end justify-around gap-2 px-8">
+<div class="w-full bg-primary-container/20 rounded-t-sm transition-all duration-700 h-[30%]"></div>
+<div class="w-full bg-primary-container/40 rounded-t-sm transition-all duration-700 h-[60%]"></div>
+<div class="w-full bg-primary-container rounded-t-sm transition-all duration-700 h-[90%]"></div>
+<div class="w-full bg-primary-container/60 rounded-t-sm transition-all duration-700 h-[45%]"></div>
+</div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+<span class="material-symbols-outlined text-8xl text-white/10">trending_up</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Service 3: Automation -->
+<section class="py-32 px-6 bg-surface-container-low relative">
+<div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-20 items-center">
+<!-- Graphic -->
+<div class="relative group">
+<div class="absolute -inset-4 bg-primary-container/5 rounded-xl blur-2xl group-hover:bg-primary-container/10 transition-all duration-500"></div>
+<div class="relative aspect-square glass-card rounded-lg border border-outline-variant/10 flex items-center justify-center p-12">
+<div class="w-full h-full flex flex-col items-center justify-center space-y-4">
+<div class="flex items-center gap-4 bg-background/50 border border-outline-variant/20 p-4 rounded-xl w-4/5 -translate-x-4">
+<div class="w-8 h-8 rounded-full bg-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary text-sm" style="font-variation-settings: 'FILL' 1;">smart_toy</span>
+</div>
+<div class="flex-1 space-y-2">
+<div class="h-2 w-full bg-white/20 rounded-full"></div>
+<div class="h-2 w-1/2 bg-white/10 rounded-full"></div>
+</div>
+</div>
+<div class="flex items-center gap-4 bg-primary-container/10 border border-primary-container/20 p-4 rounded-xl w-4/5 translate-x-4">
+<div class="flex-1 space-y-2 text-right flex flex-col items-end">
+<div class="h-2 w-3/4 bg-primary-container/40 rounded-full"></div>
+<div class="h-2 w-1/4 bg-primary-container/20 rounded-full"></div>
+</div>
+<div class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-sm" style="font-variation-settings: 'FILL' 1;">person</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Content -->
+<div class="space-y-8">
+<h2 class="font-headline text-5xl md:text-6xl text-white">Automation and Chatbots</h2>
+<p class="text-on-surface-variant text-lg leading-relaxed">
+                        WhatsApp automation and AI chatbots that work 24/7 converting leads while you sleep.
+                    </p>
+<ul class="space-y-4">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-container text-xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-sm font-label uppercase tracking-wider text-on-surface/80">WhatsApp Business API</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-container text-xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-sm font-label uppercase tracking-wider text-on-surface/80">Abandoned cart recovery</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-container text-xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-sm font-label uppercase tracking-wider text-on-surface/80">Lead qualification bot</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-container text-xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-sm font-label uppercase tracking-wider text-on-surface/80">Broadcast campaigns</span>
+</li>
+</ul>
+<button class="bg-primary-container text-on-primary font-label text-xs font-bold uppercase tracking-[0.2em] px-10 py-5 rounded-sm hover:translate-x-1 transition-transform shadow-[0_20px_40px_-10px_rgba(232,255,0,0.2)]">
+                        Automate Your Brand
+                    </button>
+</div>
+</div>
+</section>
+<!-- Bottom CTA Banner -->
+<section class="bg-[#E8FF00] py-24 px-8 relative overflow-hidden">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12 relative z-10">
+<div class="text-center md:text-left">
+<h2 class="font-headline text-5xl md:text-7xl text-[#0A0A0A] leading-tight mb-4">
+                        Not sure which service you need?
+                    </h2>
+<p class="font-body text-[#0A0A0A] text-xl opacity-80">
+                        Get a free audit — we'll tell you exactly what will move the needle.
+                    </p>
+</div>
+<button class="bg-[#0A0A0A] text-[#E8FF00] font-label text-sm font-bold uppercase tracking-[0.2em] px-12 py-6 rounded-sm shadow-[0_24px_48px_-12px_rgba(0,0,0,0.4)] hover:scale-105 transition-all duration-300">
+                    Get Free Audit
+                </button>
+</div>
+<!-- Decorative Elements -->
+<div class="absolute top-0 right-0 w-64 h-64 bg-black/5 -translate-y-1/2 translate-x-1/2 rounded-full"></div>
+<div class="absolute bottom-0 left-0 w-32 h-32 bg-black/5 translate-y-1/2 -translate-x-1/2 rounded-full"></div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#0E0E0E] w-full pt-24 pb-12 font-['Manrope'] text-xs uppercase tracking-[0.2em]">
+<div class="flex flex-col items-center w-full px-8 text-center max-w-7xl mx-auto">
+<div class="text-4xl font-black text-white mb-8">NEXGRO</div>
+<div class="flex flex-wrap justify-center gap-8 mb-16">
+<a class="text-white/40 hover:text-[#E8FF00] transition-colors hover:translate-x-1 transition-transform duration-200" href="#">Privacy Policy</a>
+<a class="text-white/40 hover:text-[#E8FF00] transition-colors hover:translate-x-1 transition-transform duration-200" href="#">Terms of Service</a>
+<a class="text-white/40 hover:text-[#E8FF00] transition-colors hover:translate-x-1 transition-transform duration-200" href="#">Instagram</a>
+<a class="text-white/40 hover:text-[#E8FF00] transition-colors hover:translate-x-1 transition-transform duration-200" href="#">LinkedIn</a>
+</div>
+<p class="text-white/20 tracking-[0.3em]">
+                © 2024 NEXGRO. ALL RIGHTS RESERVED.
+            </p>
+</div>
+</footer>
+</body></html>
