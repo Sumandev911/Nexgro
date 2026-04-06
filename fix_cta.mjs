@@ -10,7 +10,7 @@ const injectedScript = `
     // 1. Navbar and Standalone CTA logic
     const buttons = document.querySelectorAll('button, a');
     buttons.forEach(btn => {
-      const text = btn.textContent.toLowerCase().replace(/\\s+/g, ' ').trim();
+      const text = btn.textContent.toLowerCase().split(' ').filter(x => x).join(' ');
       if (
         text.includes('get free audit') || 
         text.includes('get audit') || 
@@ -21,10 +21,8 @@ const injectedScript = `
           e.preventDefault();
           const form = document.getElementById('audit-form');
           if (form) {
-            // Scroll to form if it exists on the page
             form.scrollIntoView({ behavior: 'smooth' });
           } else {
-            // Open WhatsApp if no form exists
             window.open('https://wa.me/916363690485?text=' + encodeURIComponent("Hi Nexgro! 👋 I'm interested in growing my brand. Can we talk?"), '_blank');
           }
         });
@@ -34,7 +32,6 @@ const injectedScript = `
     // 2. Form submission logic
     const auditForm = document.getElementById('audit-form');
     if (auditForm) {
-      // Remove any previously attached submit handlers by replacing the form
       const newForm = auditForm.cloneNode(true);
       auditForm.parentNode.replaceChild(newForm, auditForm);
       
@@ -42,8 +39,6 @@ const injectedScript = `
         e.preventDefault();
         
         let isValid = true;
-        
-        // Remove old error messages
         newForm.querySelectorAll('.error-msg').forEach(el => el.remove());
         
         const inputs = [
@@ -61,7 +56,6 @@ const injectedScript = `
           if (el) {
              const val = el.value.trim();
              if (field.isSelect && el.options) {
-                // Get the text of the selected option
                 formData[field.name] = val ? el.options[el.selectedIndex].text : val;
              } else {
                 formData[field.name] = val;
@@ -83,7 +77,6 @@ const injectedScript = `
           }
         });
 
-        // Get textarea
         const textarea = newForm.querySelector('textarea');
         let messageVal = textarea ? textarea.value.trim() : '';
 
@@ -112,21 +105,26 @@ files.forEach(file => {
   const filePath = path.join(dir, file);
   let content = fs.readFileSync(filePath, 'utf8');
 
-  // Strip existing old script block for Form Handling to prevent conflicts
-  content = content.replace(/\\/\\/ Form Handling[\\s\\S]*?\\}\\);[\\s\\S]*?\\}/g, '');
+  const marker = '// Form Handling';
+  if (content.includes(marker)) {
+    content = content.split(marker)[0] + '\\n</script>\\n</body>';
+  }
   
   if (!content.includes('1. Navbar and Standalone CTA logic')) {
      const injection = injectedScript + '\\n</body>';
-     content = content.replace(/<\\/body>/i, injection);
+     if (content.includes('</body>')) {
+        content = content.replace('</body>', injection);
+     } else if (content.includes('</BODY>')) {
+        content = content.replace('</BODY>', injection);
+     }
      
-     // Remove required attributes so that the browser HTML5 validator doesn't block JS logic
      content = content.replace(/required=""/g, '');
      content = content.replace(/required/g, '');
      
      fs.writeFileSync(filePath, content);
-     console.log(\`✅ Applied changes to \${file}\`);
+     console.log('✅ Applied changes to ' + file);
   } else {
-     console.log(\`⚡ Already applied to \${file}, skipping.\`);
+     console.log('⚡ Already applied to ' + file + ', skipping.');
   }
 });
 
