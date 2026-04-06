@@ -1,566 +1,628 @@
 <!DOCTYPE html>
 
-<html class="dark" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>NEXGRO | We Grow D2C Brands Globally</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-        tailwind.config = {
-          darkMode: "class",
-          theme: {
-            extend: {
-              colors: {
-                "surface-container-highest": "#353535",
-                "on-secondary-fixed-variant": "#434b00",
-                "on-primary-fixed-variant": "#434b00",
-                "error": "#ffb4ab",
-                "primary": "#ffffff",
-                "surface-variant": "#353535",
-                "tertiary-fixed": "#c6e9f0",
-                "on-secondary-fixed": "#1a1e00",
-                "secondary-fixed": "#deeb7a",
-                "surface-container-low": "#1b1b1b",
-                "tertiary": "#ffffff",
-                "secondary": "#c2ce61",
-                "outline": "#919378",
-                "on-tertiary-fixed": "#001f24",
-                "secondary-fixed-dim": "#c2ce61",
-                "primary-fixed-dim": "#bed100",
-                "primary-fixed": "#d9ef00",
-                "on-surface-variant": "#c7c9ab",
-                "background": "#131313",
-                "on-error-container": "#ffdad6",
-                "outline-variant": "#464832",
-                "on-error": "#690005",
-                "tertiary-container": "#c6e9f0",
-                "on-secondary-container": "#e4f17f",
-                "secondary-container": "#646e02",
-                "inverse-surface": "#e2e2e2",
-                "on-tertiary-container": "#496a70",
-                "on-background": "#e2e2e2",
-                "on-secondary": "#2e3300",
-                "on-primary-container": "#606a00",
-                "surface-container": "#1f1f1f",
-                "tertiary-fixed-dim": "#aaccd3",
-                "surface-tint": "#bed100",
-                "surface-bright": "#393939",
-                "on-tertiary-fixed-variant": "#2b4c51",
-                "surface": "#131313",
-                "on-tertiary": "#13353b",
-                "surface-container-high": "#2a2a2a",
-                "error-container": "#93000a",
-                "on-primary-fixed": "#1a1e00",
-                "primary-container": "#d9ef00",
-                "surface-container-lowest": "#0e0e0e",
-                "on-primary": "#2e3300",
-                "inverse-on-surface": "#303030",
-                "surface-dim": "#131313",
-                "inverse-primary": "#5a6400",
-                "on-surface": "#e2e2e2"
-              },
-              fontFamily: {
-                "headline": ["Manrope"],
-                "body": ["Inter"],
-                "label": ["Inter"]
-              },
-              borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
-            },
+<html class="dark" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>NEXGRO | We Grow D2C Brands Globally</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface-container-highest": "#353535",
+            "on-secondary-fixed-variant": "#434b00",
+            "on-primary-fixed-variant": "#434b00",
+            "error": "#ffb4ab",
+            "primary": "#ffffff",
+            "surface-variant": "#353535",
+            "tertiary-fixed": "#c6e9f0",
+            "on-secondary-fixed": "#1a1e00",
+            "secondary-fixed": "#deeb7a",
+            "surface-container-low": "#1b1b1b",
+            "tertiary": "#ffffff",
+            "secondary": "#c2ce61",
+            "outline": "#919378",
+            "on-tertiary-fixed": "#001f24",
+            "secondary-fixed-dim": "#c2ce61",
+            "primary-fixed-dim": "#bed100",
+            "primary-fixed": "#d9ef00",
+            "on-surface-variant": "#c7c9ab",
+            "background": "#131313",
+            "on-error-container": "#ffdad6",
+            "outline-variant": "#464832",
+            "on-error": "#690005",
+            "tertiary-container": "#c6e9f0",
+            "on-secondary-container": "#e4f17f",
+            "secondary-container": "#646e02",
+            "inverse-surface": "#e2e2e2",
+            "on-tertiary-container": "#496a70",
+            "on-background": "#e2e2e2",
+            "on-secondary": "#2e3300",
+            "on-primary-container": "#606a00",
+            "surface-container": "#1f1f1f",
+            "tertiary-fixed-dim": "#aaccd3",
+            "surface-tint": "#bed100",
+            "surface-bright": "#393939",
+            "on-tertiary-fixed-variant": "#2b4c51",
+            "surface": "#131313",
+            "on-tertiary": "#13353b",
+            "surface-container-high": "#2a2a2a",
+            "error-container": "#93000a",
+            "on-primary-fixed": "#1a1e00",
+            "primary-container": "#d9ef00",
+            "surface-container-lowest": "#0e0e0e",
+            "on-primary": "#2e3300",
+            "inverse-on-surface": "#303030",
+            "surface-dim": "#131313",
+            "inverse-primary": "#5a6400",
+            "on-surface": "#e2e2e2"
           },
-        }
-    </script>
-<style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-        .grid-pattern {
-            background-image: radial-gradient(#464832 1px, transparent 1px);
-            background-size: 40px 40px;
-        }
-        .glow-hover:hover {
-            box-shadow: 0 0 20px 0 rgba(232, 255, 0, 0.15);
-        }
-    </style>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;display=swap" rel="stylesheet"/></head>
-<body class="bg-background text-on-background font-body selection:bg-primary-container selection:text-on-primary-container">
-<!-- TopNavBar -->
-<nav class="fixed top-0 w-full z-[100] bg-[#0A0A0A]/90 backdrop-blur-md border-b border-white/5">
-<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-<!-- Left: Logo -->
-<a class="text-white text-3xl font-bold tracking-wider" href="#" style="font-family: 'Bebas Neue', sans-serif;">NEXGRO</a>
-<!-- Center: Links (Desktop) -->
-<div class="hidden md:flex items-center gap-10">
-<a class="text-[10px] uppercase tracking-[0.2em] text-white hover:text-[#E8FF00] transition-colors" href="#">Home</a>
-<a class="text-[10px] uppercase tracking-[0.2em] text-white hover:text-[#E8FF00] transition-colors" href="#">Services</a>
-<a class="text-[10px] uppercase tracking-[0.2em] text-white hover:text-[#E8FF00] transition-colors" href="#">Our Work</a>
-<a class="text-[10px] uppercase tracking-[0.2em] text-white hover:text-[#E8FF00] transition-colors" href="#">Process</a>
-<a class="text-[10px] uppercase tracking-[0.2em] text-white hover:text-[#E8FF00] transition-colors" href="#">Contact</a>
-</div>
-<!-- Right: CTA (Desktop) -->
-<div class="hidden md:block">
-<button class="bg-[#E8FF00] text-black text-[10px] font-black px-6 py-3 uppercase tracking-widest hover:brightness-110 transition-all">
-                Get Free Audit
-            </button>
-</div>
-<!-- Mobile Menu Toggle -->
-<button class="md:hidden text-white p-2" id="mobile-menu-btn">
-<span class="material-symbols-outlined">menu</span>
-</button>
-</div>
-<!-- Mobile Menu Dropdown -->
-<div class="hidden md:hidden bg-[#0A0A0A] border-t border-white/5 absolute w-full left-0 py-8 px-6" id="mobile-menu">
-<div class="flex flex-col gap-6 items-center text-center">
-<a class="text-xs uppercase tracking-[0.2em] text-white" href="#">Home</a>
-<a class="text-xs uppercase tracking-[0.2em] text-white" href="#">Services</a>
-<a class="text-xs uppercase tracking-[0.2em] text-white" href="#">Our Work</a>
-<a class="text-xs uppercase tracking-[0.2em] text-white" href="#">Process</a>
-<a class="text-xs uppercase tracking-[0.2em] text-white" href="#">Contact</a>
-<button class="w-full bg-[#E8FF00] text-black text-[10px] font-black px-6 py-4 uppercase tracking-widest mt-4">
-                Get Free Audit
-            </button>
-</div>
-</div>
-</nav>
-<main>
-<!-- Hero Section -->
-<section class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
-<div class="absolute inset-0 grid-pattern opacity-20"></div>
-<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary-container/5 rounded-full blur-[120px]"></div>
-<div class="relative z-10 max-w-7xl mx-auto px-8 text-center">
-<div class="inline-block px-4 py-1.5 mb-8 rounded-full border border-outline-variant/20 bg-surface-container-low/50 backdrop-blur-sm">
-<span class="text-[10px] uppercase tracking-[0.2em] font-bold text-primary-container">Global D2C Growth Partner</span>
-</div>
-<h1 class="font-headline text-6xl md:text-8xl font-extrabold tracking-tighter text-white mb-6 leading-[0.9]">
-                    We Grow D2C <br/><span class="text-primary-container">Brands Globally</span>
-</h1>
-<p class="max-w-2xl mx-auto text-on-surface-variant text-lg md:text-xl mb-12 font-light leading-relaxed">
-                    Stores. Ads. Automation. Everything your brand needs to scale from local success to international dominance.
-                </p>
-<div class="flex flex-col md:flex-row items-center justify-center gap-6">
-<button class="w-full md:w-auto px-10 py-4 bg-primary-container text-on-primary font-bold text-sm uppercase tracking-widest rounded-sm hover:brightness-110 transition-all shadow-[0_0_30px_-5px_rgba(232,255,0,0.3)]">
-                        See Our Work
-                    </button>
-<button class="w-full md:w-auto px-10 py-4 bg-transparent border border-outline-variant/30 text-white font-bold text-sm uppercase tracking-widest rounded-sm hover:bg-white/5 transition-all">
-                        Get A Free Audit
-                    </button>
-</div>
-</div>
-</section>
-<!-- Stats Bar -->
-<section class="bg-surface-container-lowest py-16">
-<div class="max-w-7xl mx-auto px-8">
-<div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
-<div class="flex flex-col gap-2">
-<span class="text-4xl md:text-5xl font-black text-white font-headline">15+</span>
-<span class="text-xs uppercase tracking-widest text-on-surface-variant font-bold">Stores Built</span>
-</div>
-<div class="flex flex-col gap-2">
-<span class="text-4xl md:text-5xl font-black text-white font-headline">3</span>
-<span class="text-xs uppercase tracking-widest text-on-surface-variant font-bold">Countries Served</span>
-</div>
-<div class="flex flex-col gap-2">
-<span class="text-4xl md:text-5xl font-black text-primary-container font-headline">₹50L+</span>
-<span class="text-xs uppercase tracking-widest text-on-surface-variant font-bold">Revenue Generated</span>
-</div>
-</div>
-</div>
-</section>
-<!-- Services Section -->
-<section class="py-32 bg-surface">
-<div class="max-w-7xl mx-auto px-8">
-<div class="mb-20">
-<span class="text-primary-container font-bold text-xs uppercase tracking-[0.3em]">Our Expertise</span>
-<h2 class="text-4xl md:text-5xl font-black text-white mt-4 font-headline tracking-tight">Full-Stack Solutions</h2>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-<!-- Service Card 1 -->
-<div class="group p-10 bg-surface-container-low border border-transparent hover:border-primary-container/20 transition-all duration-500 glow-hover relative overflow-hidden">
-<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-100 transition-opacity">
-<span class="material-symbols-outlined text-primary-container text-6xl">shopping_cart</span>
-</div>
-<h3 class="text-2xl font-bold text-white mb-6 font-headline">Shopify Store Development</h3>
-<p class="text-on-surface-variant leading-relaxed mb-8">
-                            Custom built Shopify stores optimized for mobile, speed and conversions. We don't just build themes; we build sales engines.
-                        </p>
-<div class="h-1 w-12 bg-primary-container group-hover:w-full transition-all duration-500"></div>
-</div>
-<!-- Service Card 2 -->
-<div class="group p-10 bg-surface-container-low border border-transparent hover:border-primary-container/20 transition-all duration-500 glow-hover relative overflow-hidden">
-<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-100 transition-opacity">
-<span class="material-symbols-outlined text-primary-container text-6xl">trending_up</span>
-</div>
-<h3 class="text-2xl font-bold text-white mb-6 font-headline">Performance Marketing</h3>
-<p class="text-on-surface-variant leading-relaxed mb-8">
-                            Meta and Google Ads managed by data-driven strategies that actually scale. ROI isn't a goal; it's a standard.
-                        </p>
-<div class="h-1 w-12 bg-primary-container group-hover:w-full transition-all duration-500"></div>
-</div>
-<!-- Service Card 3 -->
-<div class="group p-10 bg-surface-container-low border border-transparent hover:border-primary-container/20 transition-all duration-500 glow-hover relative overflow-hidden">
-<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-100 transition-opacity">
-<span class="material-symbols-outlined text-primary-container text-6xl">smart_toy</span>
-</div>
-<h3 class="text-2xl font-bold text-white mb-6 font-headline">Automation and Chatbots</h3>
-<p class="text-on-surface-variant leading-relaxed mb-8">
-                            WhatsApp automation and AI chatbots that convert leads 24/7. Reduce support load and increase abandoned cart recovery.
-                        </p>
-<div class="h-1 w-12 bg-primary-container group-hover:w-full transition-all duration-500"></div>
-</div>
-</div>
-</div>
-</section>
-<!-- How We Work (Timeline) -->
-<section class="py-32 bg-surface-container-lowest overflow-hidden">
-<div class="max-w-7xl mx-auto px-8">
-<h2 class="text-4xl md:text-5xl font-black text-white mb-24 font-headline text-center tracking-tight">How We <span class="text-primary-container">Scale You</span></h2>
-<div class="relative flex flex-col md:flex-row justify-between items-start gap-12 md:gap-4">
-<!-- Progress Line -->
-<div class="hidden md:block absolute top-10 left-0 w-full h-px bg-outline-variant/20 z-0">
-<div class="w-1/3 h-full bg-primary-container"></div>
-</div>
-<!-- Step 1 -->
-<div class="relative z-10 md:w-1/4">
-<div class="w-20 h-20 bg-surface-container-high border-4 border-background flex items-center justify-center mb-8 rounded-sm">
-<span class="text-primary-container font-black text-2xl">01</span>
-</div>
-<h4 class="text-xl font-bold text-white mb-4 uppercase tracking-tighter">Discovery</h4>
-<p class="text-on-surface-variant text-sm leading-relaxed">In-depth analysis of your brand's current bottlenecks and market potential.</p>
-</div>
-<!-- Step 2 -->
-<div class="relative z-10 md:w-1/4">
-<div class="w-20 h-20 bg-surface-container-high border-4 border-background flex items-center justify-center mb-8 rounded-sm">
-<span class="text-primary-container font-black text-2xl">02</span>
-</div>
-<h4 class="text-xl font-bold text-white mb-4 uppercase tracking-tighter">Strategy</h4>
-<p class="text-on-surface-variant text-sm leading-relaxed">Custom roadmap focused on high-impact wins and long-term brand equity.</p>
-</div>
-<!-- Step 3 -->
-<div class="relative z-10 md:w-1/4">
-<div class="w-20 h-20 bg-primary-container flex items-center justify-center mb-8 rounded-sm">
-<span class="text-on-primary font-black text-2xl">03</span>
-</div>
-<h4 class="text-xl font-bold text-white mb-4 uppercase tracking-tighter">Execution</h4>
-<p class="text-on-surface-variant text-sm leading-relaxed">Deployment of optimized stores and aggressive multi-channel ad campaigns.</p>
-</div>
-<!-- Step 4 -->
-<div class="relative z-10 md:w-1/4">
-<div class="w-20 h-20 bg-surface-container-high border-4 border-background flex items-center justify-center mb-8 rounded-sm">
-<span class="text-primary-container font-black text-2xl">04</span>
-</div>
-<h4 class="text-xl font-bold text-white mb-4 uppercase tracking-tighter">Scale</h4>
-<p class="text-on-surface-variant text-sm leading-relaxed">Data-driven iteration to push your brand to new global heights.</p>
-</div>
-</div>
-</div>
-</section>
-<!-- Portfolio Section -->
-<section class="py-32 bg-surface">
-<div class="max-w-7xl mx-auto px-8">
-<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
-<div>
-<span class="text-primary-container font-bold text-xs uppercase tracking-[0.3em]">Selected Work</span>
-<h2 class="text-4xl md:text-5xl font-black text-white mt-4 font-headline tracking-tight">Proof In Results</h2>
-</div>
-<button class="text-sm font-bold uppercase tracking-widest text-primary-container border-b border-primary-container pb-1">View All Projects</button>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-<!-- Project 1 -->
-<div class="group bg-surface-container-low p-6 rounded-sm overflow-hidden">
-<div class="relative h-80 mb-8 overflow-hidden">
-<img alt="Drip District Store" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Modern streetwear e-commerce website interface shown on a high-end laptop with vibrant neon accents and professional studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBj_tXE1anPpRkwMqkYD_eG5F4C5kywoiPiWGBTSEztYXXxFm_nlQa7lyHO-ax6ct6EQQqh4bXJ4UwFiHmFHaGqvsRfk8YRkKxFmvL_ovJ5tBtWZnrErtR8oY7c35YUVhtUSyhaNxD0e86gU2dg1_5CQHv03c1_EZxz_L4cNYckCOzL6UwwaHetTOVBcTSYb1w7tiMgfwJ8XPkGUPdYMsmjAaKifFvc4uwDovRd2hjYNcowAXDW4v3z-yzyD2TxKnkRICBZSwEMBRMT"/>
-<div class="absolute top-4 right-4 bg-primary-container text-on-primary text-[10px] font-black px-3 py-1 uppercase">Shopify</div>
-</div>
-<div class="flex justify-between items-start">
-<div>
-<h3 class="text-2xl font-black text-white font-headline">Drip District</h3>
-<p class="text-on-surface-variant mt-2">Full Shopify store built in 24 hours.</p>
-</div>
-<div class="text-right">
-<span class="block text-primary-container font-black text-xl">300% ROI</span>
-<span class="text-[10px] uppercase text-on-surface-variant font-bold">First Month</span>
-</div>
-</div>
-</div>
-<!-- Project 2 (Visual Placeholder) -->
-<div class="group bg-surface-container-low p-6 rounded-sm overflow-hidden">
-<div class="relative h-80 mb-8 overflow-hidden">
-<img alt="Minimalist Lifestyle Brand" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Clean and minimal skincare brand website mockup with soft natural lighting and elegant product typography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA95C-VOen6gl13RqBiFC35TYNWcftXfacjy0bwhrNAtmzYnD8HtrRtjiT61SGOaY-oKcwByMfoZLZIEzWtibbwLFD6k8xCb_2gnN4hzKCuHvoUuAkX61NLV0GNFCQrO-Cz5yw3dfw9RraiBn3h1s8qbNPyhSBfLZ5R0o3eHoOjSeRhBbSzgglf2N9wVDemtnCZTPcn9heOvviQPu3QbMDl7PZn1-pFFoDiWNr8bpAHwMPDTISW-9VsPp61ivJeXBATULLZVuXbJFfk"/>
-<div class="absolute top-4 right-4 bg-primary-container text-on-primary text-[10px] font-black px-3 py-1 uppercase">Global Ads</div>
-</div>
-<div class="flex justify-between items-start">
-<div>
-<h3 class="text-2xl font-black text-white font-headline">Luxe Aura</h3>
-<p class="text-on-surface-variant mt-2">Performance marketing for luxury home decor.</p>
-</div>
-<div class="text-right">
-<span class="block text-primary-container font-black text-xl">₹12L Rev</span>
-<span class="text-[10px] uppercase text-on-surface-variant font-bold">Scaling Phase</span>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Why NEXGRO -->
-<section class="py-32 bg-surface-container-low">
-<div class="max-w-7xl mx-auto px-8">
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-20">
-<div>
-<span class="text-primary-container font-bold text-xs uppercase tracking-[0.3em]">The Edge</span>
-<h2 class="text-4xl md:text-5xl font-black text-white mt-4 mb-8 font-headline tracking-tight">Why Brands <br/>Trust NEXGRO</h2>
-<p class="text-on-surface-variant text-lg leading-relaxed mb-12">
-                            We operate at the intersection of design, engineering, and psychology. Our goal isn't just to make things look good; it's to make them perform.
-                        </p>
-<div class="grid grid-cols-2 gap-8">
-<div>
-<span class="material-symbols-outlined text-primary-container text-3xl mb-4" data-weight="fill">bolt</span>
-<h5 class="text-white font-bold mb-2 uppercase text-sm tracking-tight">Fast Delivery</h5>
-<p class="text-xs text-on-surface-variant">Store live in 7 days.</p>
-</div>
-<div>
-<span class="material-symbols-outlined text-primary-container text-3xl mb-4" data-weight="fill">smartphone</span>
-<h5 class="text-white font-bold mb-2 uppercase text-sm tracking-tight">Mobile First</h5>
-<p class="text-xs text-on-surface-variant">90% traffic is mobile.</p>
-</div>
-<div>
-<span class="material-symbols-outlined text-primary-container text-3xl mb-4" data-weight="fill">layers</span>
-<h5 class="text-white font-bold mb-2 uppercase text-sm tracking-tight">Full Stack</h5>
-<p class="text-xs text-on-surface-variant">End-to-end growth.</p>
-</div>
-<div>
-<span class="material-symbols-outlined text-primary-container text-3xl mb-4" data-weight="fill">chat_bubble</span>
-<h5 class="text-white font-bold mb-2 uppercase text-sm tracking-tight">Direct WhatsApp</h5>
-<p class="text-xs text-on-surface-variant">Dedicated support.</p>
-</div>
-</div>
-</div>
-<div class="bg-background p-1 rounded-sm">
-<div class="h-full w-full bg-surface-container-high relative flex items-center justify-center p-12 overflow-hidden">
-<div class="absolute inset-0 grid-pattern opacity-10"></div>
-<div class="relative z-10 text-center">
-<div class="text-primary-container font-black text-8xl font-headline mb-4">7 DAYS</div>
-<div class="text-white font-bold uppercase tracking-[0.4em] text-sm">Launch Timeline</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Testimonials -->
-<section class="py-32 bg-surface">
-<div class="max-w-7xl mx-auto px-8">
-<h2 class="text-3xl font-black text-white mb-16 font-headline tracking-tight">Client <span class="text-primary-container">Wall of Fame</span></h2>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-<!-- Testimonial 1 -->
-<div class="p-12 bg-surface-container-low border-l-4 border-primary-container">
-<p class="text-white text-lg font-light leading-relaxed mb-8 italic">
-                            "NEXGRO turned our vision into a high-converting Shopify store in less than a week. Their attention to mobile optimization is exactly what we needed for our demographic."
-                        </p>
-<div>
-<span class="text-primary-container font-bold block">Aditya Sharma</span>
-<span class="text-on-surface-variant text-xs uppercase tracking-widest font-medium">Founder, Urban Threads</span>
-</div>
-</div>
-<!-- Testimonial 2 -->
-<div class="p-12 bg-surface-container-low border-l-4 border-primary-container">
-<p class="text-white text-lg font-light leading-relaxed mb-8 italic">
-                            "The WhatsApp automation they implemented reduced our customer support tickets by 60% while increasing our repeat purchase rate by 20%. Highly recommended."
-                        </p>
-<div>
-<span class="text-primary-container font-bold block">Sarah Jenkins</span>
-<span class="text-on-surface-variant text-xs uppercase tracking-widest font-medium">CEO, Glow Skincare</span>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Contact/CTA Section -->
-<section class="py-32 bg-background relative overflow-hidden">
-<div class="absolute top-0 right-0 w-1/2 h-full bg-primary-container/5 -skew-x-12"></div>
-<div class="max-w-7xl mx-auto px-8 relative z-10">
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-20">
-<div>
-<h2 class="text-5xl md:text-6xl font-black text-white mb-8 font-headline tracking-tighter">Ready To <br/><span class="text-primary-container">Scale Your Brand?</span></h2>
-<p class="text-on-surface-variant text-xl mb-12">Get a free store audit and growth strategy session. No commitments, just raw value.</p>
-<div class="flex items-center gap-6 p-6 bg-surface-container-low/50 backdrop-blur-md rounded-sm border border-outline-variant/10">
-<div class="w-12 h-12 bg-primary-container rounded-full flex items-center justify-center text-on-primary">
-<span class="material-symbols-outlined">verified</span>
-</div>
-<p class="text-white font-bold text-sm">Join 15+ brands scaling with NEXGRO</p>
-</div>
-</div>
-<div class="bg-surface-container-high p-10 rounded-sm">
-<form class="flex flex-col gap-6">
-<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-<div class="flex flex-col gap-2">
-<label class="text-[10px] uppercase tracking-widest text-on-surface-variant font-bold">Full Name</label>
-<input class="bg-transparent border-0 border-b border-outline-variant/30 focus:border-primary-container focus:ring-0 text-white placeholder:text-white/20 transition-all py-3" placeholder="John Doe" type="text"/>
-</div>
-<div class="flex flex-col gap-2">
-<label class="text-[10px] uppercase tracking-widest text-on-surface-variant font-bold">Brand Name</label>
-<input class="bg-transparent border-0 border-b border-outline-variant/30 focus:border-primary-container focus:ring-0 text-white placeholder:text-white/20 transition-all py-3" placeholder="My Cool Brand" type="text"/>
-</div>
-</div>
-<div class="flex flex-col gap-2">
-<label class="text-[10px] uppercase tracking-widest text-on-surface-variant font-bold">Email Address</label>
-<input class="bg-transparent border-0 border-b border-outline-variant/30 focus:border-primary-container focus:ring-0 text-white placeholder:text-white/20 transition-all py-3" placeholder="john@brand.com" type="email"/>
-</div>
-<div class="flex flex-col gap-2">
-<label class="text-[10px] uppercase tracking-widest text-on-surface-variant font-bold">WhatsApp Number</label>
-<input class="bg-transparent border-0 border-b border-outline-variant/30 focus:border-primary-container focus:ring-0 text-white placeholder:text-white/20 transition-all py-3" placeholder="+91 99887 76655" type="tel"/>
-</div>
-<div class="flex flex-col gap-2">
-<label class="text-[10px] uppercase tracking-widest text-on-surface-variant font-bold">Desired Service</label>
-<select class="bg-transparent border-0 border-b border-outline-variant/30 focus:border-primary-container focus:ring-0 text-white transition-all py-3">
-<option class="bg-surface-container-high">Shopify Store Development</option>
-<option class="bg-surface-container-high">Performance Marketing</option>
-<option class="bg-surface-container-high">Automation &amp; Chatbots</option>
-<option class="bg-surface-container-high">Full Growth Package</option>
-</select>
-</div>
-<button class="w-full py-4 mt-4 bg-primary-container text-on-primary font-black uppercase tracking-[0.2em] rounded-sm hover:brightness-110 active:scale-[0.98] transition-all" type="submit">
-                                Send Audit Request
-                            </button>
-</form>
-</div>
-</div>
-</div>
-</section>
-</main>
-<!-- Footer -->
-<footer class="bg-[#0E0E0E] w-full py-20 px-8 tonal-shift bg-[#1B1B1B]">
-<div class="grid grid-cols-1 md:grid-cols-4 gap-12 max-w-7xl mx-auto">
-<div class="md:col-span-1">
-<div class="flex items-center gap-2 mb-4">
-<img alt="NEXGRO Logo" class="h-6 w-auto" data-alt="NEXGRO company logo in white on dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBDHqUEel6WBbaa5TwOwB_cKStrDVga0KLbcmydMbeXG01PPh4N9xqMADhEO64IjAuG7fvSJ4EWshsPdYyfvtEfMR2UEpf76v_FM3R64KaBow_wOmAClH6jJCV8ao92VSVpwip-cW-Mfd6AN64ezAAlj0xMX5zyVFvFd0bCs3597M01zhDReMhGtXL3LqSS98L4EBwprJg2EGeNJmLyJt_SIRpsmnE9FnSosFLy6YzNBEmm25J-BgC6wNNjP5J5O_6BWCYFuS6-j6C"/>
-<span class="text-3xl font-black text-white">NEXGRO</span>
-</div>
-<p class="text-white/40 text-sm leading-relaxed max-w-xs">
-                    Building the future of D2C commerce through high-performance digital experiences.
-                </p>
-</div>
-<div>
-<h6 class="text-[#E8FF00] font-['Inter'] text-xs uppercase tracking-widest mb-8">Navigation</h6>
-<ul class="flex flex-col gap-4">
-<li><a class="text-white/40 hover:text-[#E8FF00] transition-colors font-['Inter'] text-xs uppercase tracking-widest" href="#">Our Work</a></li>
-<li><a class="text-white/40 hover:text-[#E8FF00] transition-colors font-['Inter'] text-xs uppercase tracking-widest" href="#">Services</a></li>
-<li><a class="text-white/40 hover:text-[#E8FF00] transition-colors font-['Inter'] text-xs uppercase tracking-widest" href="#">Process</a></li>
-</ul>
-</div>
-<div>
-<h6 class="text-[#E8FF00] font-['Inter'] text-xs uppercase tracking-widest mb-8">Legal</h6>
-<ul class="flex flex-col gap-4">
-<li><a class="text-white/40 hover:text-[#E8FF00] transition-colors font-['Inter'] text-xs uppercase tracking-widest" href="#">Privacy Policy</a></li>
-<li><a class="text-white/40 hover:text-[#E8FF00] transition-colors font-['Inter'] text-xs uppercase tracking-widest" href="#">Terms of Service</a></li>
-</ul>
-</div>
-<div>
-<h6 class="text-[#E8FF00] font-['Inter'] text-xs uppercase tracking-widest mb-8">Connect</h6>
-<div class="flex gap-4">
-<a class="w-10 h-10 flex items-center justify-center border border-white/10 text-white/40 hover:text-[#E8FF00] hover:border-[#E8FF00] transition-all" href="#">
-<span class="material-symbols-outlined text-sm">share</span>
-</a>
-<a class="w-10 h-10 flex items-center justify-center border border-white/10 text-white/40 hover:text-[#E8FF00] hover:border-[#E8FF00] transition-all" href="#">
-<span class="material-symbols-outlined text-sm">mail</span>
-</a>
-</div>
-</div>
-</div>
-<div class="max-w-7xl mx-auto px-8 mt-20 pt-8 border-t border-white/5">
-<p class="text-white/40 font-['Inter'] text-[10px] uppercase tracking-[0.3em]">
-                © 2024 NEXGRO. All rights reserved. Built for the global scale.
+          fontFamily: {
+            "headline": ["Manrope"],
+            "body": ["Inter"],
+            "label": ["Inter"]
+          },
+          borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
+        },
+      },
+    }
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+
+    .grid-pattern {
+      background-image: radial-gradient(#464832 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+
+    .glow-hover:hover {
+      box-shadow: 0 0 20px 0 rgba(232, 255, 0, 0.15);
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;display=swap" rel="stylesheet" />
+</head>
+
+<body
+  class="bg-background text-on-background font-body selection:bg-primary-container selection:text-on-primary-container">
+  <!-- TopNavBar -->
+  <nav class="fixed top-0 w-full z-[100] bg-[#0A0A0A]/90 backdrop-blur-md border-b border-white/5">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <!-- Left: Logo -->
+      <a class="text-white text-3xl font-bold tracking-wider" href="#"
+        style="font-family: 'Bebas Neue', sans-serif;">NEXGRO</a>
+      <!-- Center: Links (Desktop) -->
+      <div class="hidden md:flex items-center gap-10">
+        <a class="text-[10px] uppercase tracking-[0.2em] text-white hover:text-[#E8FF00] transition-colors"
+          href="#">Home</a>
+        <a class="text-[10px] uppercase tracking-[0.2em] text-white hover:text-[#E8FF00] transition-colors"
+          href="#">Services</a>
+        <a class="text-[10px] uppercase tracking-[0.2em] text-white hover:text-[#E8FF00] transition-colors" href="#">Our
+          Work</a>
+        <a class="text-[10px] uppercase tracking-[0.2em] text-white hover:text-[#E8FF00] transition-colors"
+          href="#">Process</a>
+        <a class="text-[10px] uppercase tracking-[0.2em] text-white hover:text-[#E8FF00] transition-colors"
+          href="#">Contact</a>
+      </div>
+      <!-- Right: CTA (Desktop) -->
+      <div class="hidden md:block">
+        <button
+          class="bg-[#E8FF00] text-black text-[10px] font-black px-6 py-3 uppercase tracking-widest hover:brightness-110 transition-all">
+          Get Free Audit
+        </button>
+      </div>
+      <!-- Mobile Menu Toggle -->
+      <button class="md:hidden text-white p-2" id="mobile-menu-btn">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+    </div>
+    <!-- Mobile Menu Dropdown -->
+    <div class="hidden md:hidden bg-[#0A0A0A] border-t border-white/5 absolute w-full left-0 py-8 px-6"
+      id="mobile-menu">
+      <div class="flex flex-col gap-6 items-center text-center">
+        <a class="text-xs uppercase tracking-[0.2em] text-white" href="#">Home</a>
+        <a class="text-xs uppercase tracking-[0.2em] text-white" href="#">Services</a>
+        <a class="text-xs uppercase tracking-[0.2em] text-white" href="#">Our Work</a>
+        <a class="text-xs uppercase tracking-[0.2em] text-white" href="#">Process</a>
+        <a class="text-xs uppercase tracking-[0.2em] text-white" href="#">Contact</a>
+        <button class="w-full bg-[#E8FF00] text-black text-[10px] font-black px-6 py-4 uppercase tracking-widest mt-4">
+          Get Free Audit
+        </button>
+      </div>
+    </div>
+  </nav>
+  <main>
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+      <div class="absolute inset-0 grid-pattern opacity-20"></div>
+      <div
+        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary-container/5 rounded-full blur-[120px]">
+      </div>
+      <div class="relative z-10 max-w-7xl mx-auto px-8 text-center">
+        <div
+          class="inline-block px-4 py-1.5 mb-8 rounded-full border border-outline-variant/20 bg-surface-container-low/50 backdrop-blur-sm">
+          <span class="text-[10px] uppercase tracking-[0.2em] font-bold text-primary-container">Global D2C Growth
+            Partner</span>
+        </div>
+        <h1 class="font-headline text-6xl md:text-8xl font-extrabold tracking-tighter text-white mb-6 leading-[0.9]">
+          We Grow D2C <br /><span class="text-primary-container">Brands Globally</span>
+        </h1>
+        <p class="max-w-2xl mx-auto text-on-surface-variant text-lg md:text-xl mb-12 font-light leading-relaxed">
+          Stores. Ads. Automation. Everything your brand needs to scale from local success to international dominance.
+        </p>
+        <div class="flex flex-col md:flex-row items-center justify-center gap-6">
+          <button
+            class="w-full md:w-auto px-10 py-4 bg-primary-container text-on-primary font-bold text-sm uppercase tracking-widest rounded-sm hover:brightness-110 transition-all shadow-[0_0_30px_-5px_rgba(232,255,0,0.3)]">
+            See Our Work
+          </button>
+          <button
+            class="w-full md:w-auto px-10 py-4 bg-transparent border border-outline-variant/30 text-white font-bold text-sm uppercase tracking-widest rounded-sm hover:bg-white/5 transition-all">
+            Get A Free Audit
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- Stats Bar -->
+    <section class="bg-surface-container-lowest py-16">
+      <div class="max-w-7xl mx-auto px-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+          <div class="flex flex-col gap-2">
+            <span class="text-4xl md:text-5xl font-black text-white font-headline">15+</span>
+            <span class="text-xs uppercase tracking-widest text-on-surface-variant font-bold">Stores Built</span>
+          </div>
+          <div class="flex flex-col gap-2">
+            <span class="text-4xl md:text-5xl font-black text-white font-headline">3</span>
+            <span class="text-xs uppercase tracking-widest text-on-surface-variant font-bold">Countries Served</span>
+          </div>
+          <div class="flex flex-col gap-2">
+            <span class="text-4xl md:text-5xl font-black text-primary-container font-headline">₹50L+</span>
+            <span class="text-xs uppercase tracking-widest text-on-surface-variant font-bold">Revenue Generated</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Services Section -->
+    <section class="py-32 bg-surface">
+      <div class="max-w-7xl mx-auto px-8">
+        <div class="mb-20">
+          <span class="text-primary-container font-bold text-xs uppercase tracking-[0.3em]">Our Expertise</span>
+          <h2 class="text-4xl md:text-5xl font-black text-white mt-4 font-headline tracking-tight">Full-Stack Solutions
+          </h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Service Card 1 -->
+          <div
+            class="group p-10 bg-surface-container-low border border-transparent hover:border-primary-container/20 transition-all duration-500 glow-hover relative overflow-hidden">
+            <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-100 transition-opacity">
+              <span class="material-symbols-outlined text-primary-container text-6xl">shopping_cart</span>
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-6 font-headline">Shopify Store Development</h3>
+            <p class="text-on-surface-variant leading-relaxed mb-8">
+              Custom built Shopify stores optimized for mobile, speed and conversions. We don't just build themes; we
+              build sales engines.
             </p>
-</div>
-</footer>
-<script>
+            <div class="h-1 w-12 bg-primary-container group-hover:w-full transition-all duration-500"></div>
+          </div>
+          <!-- Service Card 2 -->
+          <div
+            class="group p-10 bg-surface-container-low border border-transparent hover:border-primary-container/20 transition-all duration-500 glow-hover relative overflow-hidden">
+            <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-100 transition-opacity">
+              <span class="material-symbols-outlined text-primary-container text-6xl">trending_up</span>
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-6 font-headline">Performance Marketing</h3>
+            <p class="text-on-surface-variant leading-relaxed mb-8">
+              Meta and Google Ads managed by data-driven strategies that actually scale. ROI isn't a goal; it's a
+              standard.
+            </p>
+            <div class="h-1 w-12 bg-primary-container group-hover:w-full transition-all duration-500"></div>
+          </div>
+          <!-- Service Card 3 -->
+          <div
+            class="group p-10 bg-surface-container-low border border-transparent hover:border-primary-container/20 transition-all duration-500 glow-hover relative overflow-hidden">
+            <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-100 transition-opacity">
+              <span class="material-symbols-outlined text-primary-container text-6xl">smart_toy</span>
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-6 font-headline">Automation and Chatbots</h3>
+            <p class="text-on-surface-variant leading-relaxed mb-8">
+              WhatsApp automation and AI chatbots that convert leads 24/7. Reduce support load and increase abandoned
+              cart recovery.
+            </p>
+            <div class="h-1 w-12 bg-primary-container group-hover:w-full transition-all duration-500"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- How We Work (Timeline) -->
+    <section class="py-32 bg-surface-container-lowest overflow-hidden">
+      <div class="max-w-7xl mx-auto px-8">
+        <h2 class="text-4xl md:text-5xl font-black text-white mb-24 font-headline text-center tracking-tight">How We
+          <span class="text-primary-container">Scale You</span></h2>
+        <div class="relative flex flex-col md:flex-row justify-between items-start gap-12 md:gap-4">
+          <!-- Progress Line -->
+          <div class="hidden md:block absolute top-10 left-0 w-full h-px bg-outline-variant/20 z-0">
+            <div class="w-1/3 h-full bg-primary-container"></div>
+          </div>
+          <!-- Step 1 -->
+          <div class="relative z-10 md:w-1/4">
+            <div
+              class="w-20 h-20 bg-surface-container-high border-4 border-background flex items-center justify-center mb-8 rounded-sm">
+              <span class="text-primary-container font-black text-2xl">01</span>
+            </div>
+            <h4 class="text-xl font-bold text-white mb-4 uppercase tracking-tighter">Discovery</h4>
+            <p class="text-on-surface-variant text-sm leading-relaxed">In-depth analysis of your brand's current
+              bottlenecks and market potential.</p>
+          </div>
+          <!-- Step 2 -->
+          <div class="relative z-10 md:w-1/4">
+            <div
+              class="w-20 h-20 bg-surface-container-high border-4 border-background flex items-center justify-center mb-8 rounded-sm">
+              <span class="text-primary-container font-black text-2xl">02</span>
+            </div>
+            <h4 class="text-xl font-bold text-white mb-4 uppercase tracking-tighter">Strategy</h4>
+            <p class="text-on-surface-variant text-sm leading-relaxed">Custom roadmap focused on high-impact wins and
+              long-term brand equity.</p>
+          </div>
+          <!-- Step 3 -->
+          <div class="relative z-10 md:w-1/4">
+            <div class="w-20 h-20 bg-primary-container flex items-center justify-center mb-8 rounded-sm">
+              <span class="text-on-primary font-black text-2xl">03</span>
+            </div>
+            <h4 class="text-xl font-bold text-white mb-4 uppercase tracking-tighter">Execution</h4>
+            <p class="text-on-surface-variant text-sm leading-relaxed">Deployment of optimized stores and aggressive
+              multi-channel ad campaigns.</p>
+          </div>
+          <!-- Step 4 -->
+          <div class="relative z-10 md:w-1/4">
+            <div
+              class="w-20 h-20 bg-surface-container-high border-4 border-background flex items-center justify-center mb-8 rounded-sm">
+              <span class="text-primary-container font-black text-2xl">04</span>
+            </div>
+            <h4 class="text-xl font-bold text-white mb-4 uppercase tracking-tighter">Scale</h4>
+            <p class="text-on-surface-variant text-sm leading-relaxed">Data-driven iteration to push your brand to new
+              global heights.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Portfolio Section -->
+    <section class="py-32 bg-surface">
+      <div class="max-w-7xl mx-auto px-8">
+        <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+          <div>
+            <span class="text-primary-container font-bold text-xs uppercase tracking-[0.3em]">Selected Work</span>
+            <h2 class="text-4xl md:text-5xl font-black text-white mt-4 font-headline tracking-tight">Proof In Results
+            </h2>
+          </div>
+          <button
+            class="text-sm font-bold uppercase tracking-widest text-primary-container border-b border-primary-container pb-1">View
+            All Projects</button>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Project 1 -->
+          <div class="group bg-surface-container-low p-6 rounded-sm overflow-hidden">
+            <div class="relative h-80 mb-8 overflow-hidden">
+              <img alt="Drip District Store"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                data-alt="Modern streetwear e-commerce website interface shown on a high-end laptop with vibrant neon accents and professional studio lighting"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBj_tXE1anPpRkwMqkYD_eG5F4C5kywoiPiWGBTSEztYXXxFm_nlQa7lyHO-ax6ct6EQQqh4bXJ4UwFiHmFHaGqvsRfk8YRkKxFmvL_ovJ5tBtWZnrErtR8oY7c35YUVhtUSyhaNxD0e86gU2dg1_5CQHv03c1_EZxz_L4cNYckCOzL6UwwaHetTOVBcTSYb1w7tiMgfwJ8XPkGUPdYMsmjAaKifFvc4uwDovRd2hjYNcowAXDW4v3z-yzyD2TxKnkRICBZSwEMBRMT" />
+              <div
+                class="absolute top-4 right-4 bg-primary-container text-on-primary text-[10px] font-black px-3 py-1 uppercase">
+                Shopify</div>
+            </div>
+            <div class="flex justify-between items-start">
+              <div>
+                <h3 class="text-2xl font-black text-white font-headline">Drip District</h3>
+                <p class="text-on-surface-variant mt-2">Full Shopify store built in 24 hours.</p>
+              </div>
+              <div class="text-right">
+                <span class="block text-primary-container font-black text-xl">300% ROI</span>
+                <span class="text-[10px] uppercase text-on-surface-variant font-bold">First Month</span>
+              </div>
+            </div>
+          </div>
+          <!-- Project 2 (Visual Placeholder) -->
+          <div class="group bg-surface-container-low p-6 rounded-sm overflow-hidden">
+            <div class="relative h-80 mb-8 overflow-hidden">
+              <img alt="Minimalist Lifestyle Brand"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                data-alt="Clean and minimal skincare brand website mockup with soft natural lighting and elegant product typography"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuA95C-VOen6gl13RqBiFC35TYNWcftXfacjy0bwhrNAtmzYnD8HtrRtjiT61SGOaY-oKcwByMfoZLZIEzWtibbwLFD6k8xCb_2gnN4hzKCuHvoUuAkX61NLV0GNFCQrO-Cz5yw3dfw9RraiBn3h1s8qbNPyhSBfLZ5R0o3eHoOjSeRhBbSzgglf2N9wVDemtnCZTPcn9heOvviQPu3QbMDl7PZn1-pFFoDiWNr8bpAHwMPDTISW-9VsPp61ivJeXBATULLZVuXbJFfk" />
+              <div
+                class="absolute top-4 right-4 bg-primary-container text-on-primary text-[10px] font-black px-3 py-1 uppercase">
+                Global Ads</div>
+            </div>
+            <div class="flex justify-between items-start">
+
+              <div class="text-right">
+                <span class="block text-primary-container font-black text-xl">₹12L Rev</span>
+                <span class="text-[10px] uppercase text-on-surface-variant font-bold">Scaling Phase</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Why NEXGRO -->
+    <section class="py-32 bg-surface-container-low">
+      <div class="max-w-7xl mx-auto px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-20">
+          <div>
+            <span class="text-primary-container font-bold text-xs uppercase tracking-[0.3em]">The Edge</span>
+            <h2 class="text-4xl md:text-5xl font-black text-white mt-4 mb-8 font-headline tracking-tight">Why Brands
+              <br />Trust NEXGRO</h2>
+            <p class="text-on-surface-variant text-lg leading-relaxed mb-12">
+              We operate at the intersection of design, engineering, and psychology. Our goal isn't just to make things
+              look good; it's to make them perform.
+            </p>
+            <div class="grid grid-cols-2 gap-8">
+              <div>
+                <span class="material-symbols-outlined text-primary-container text-3xl mb-4"
+                  data-weight="fill">bolt</span>
+                <h5 class="text-white font-bold mb-2 uppercase text-sm tracking-tight">Fast Delivery</h5>
+                <p class="text-xs text-on-surface-variant">Store live in 7 days.</p>
+              </div>
+              <div>
+                <span class="material-symbols-outlined text-primary-container text-3xl mb-4"
+                  data-weight="fill">smartphone</span>
+                <h5 class="text-white font-bold mb-2 uppercase text-sm tracking-tight">Mobile First</h5>
+                <p class="text-xs text-on-surface-variant">90% traffic is mobile.</p>
+              </div>
+              <div>
+                <span class="material-symbols-outlined text-primary-container text-3xl mb-4"
+                  data-weight="fill">layers</span>
+                <h5 class="text-white font-bold mb-2 uppercase text-sm tracking-tight">Full Stack</h5>
+                <p class="text-xs text-on-surface-variant">End-to-end growth.</p>
+              </div>
+              <div>
+                <span class="material-symbols-outlined text-primary-container text-3xl mb-4"
+                  data-weight="fill">chat_bubble</span>
+                <h5 class="text-white font-bold mb-2 uppercase text-sm tracking-tight">Direct WhatsApp</h5>
+                <p class="text-xs text-on-surface-variant">Dedicated support.</p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-background p-1 rounded-sm">
+            <div
+              class="h-full w-full bg-surface-container-high relative flex items-center justify-center p-12 overflow-hidden">
+              <div class="absolute inset-0 grid-pattern opacity-10"></div>
+              <div class="relative z-10 text-center">
+                <div class="text-primary-container font-black text-8xl font-headline mb-4">7 DAYS</div>
+                <div class="text-white font-bold uppercase tracking-[0.4em] text-sm">Launch Timeline</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact/CTA Section -->
+    <section class="py-32 bg-background relative overflow-hidden">
+      <div class="absolute top-0 right-0 w-1/2 h-full bg-primary-container/5 -skew-x-12"></div>
+      <div class="max-w-7xl mx-auto px-8 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-20">
+          <div>
+            <h2 class="text-5xl md:text-6xl font-black text-white mb-8 font-headline tracking-tighter">Ready To
+              <br /><span class="text-primary-container">Scale Your Brand?</span></h2>
+            <p class="text-on-surface-variant text-xl mb-12">Get a free store audit and growth strategy session. No
+              commitments, just raw value.</p>
+            <div
+              class="flex items-center gap-6 p-6 bg-surface-container-low/50 backdrop-blur-md rounded-sm border border-outline-variant/10">
+              <div class="w-12 h-12 bg-primary-container rounded-full flex items-center justify-center text-on-primary">
+                <span class="material-symbols-outlined">verified</span>
+              </div>
+              <p class="text-white font-bold text-sm">Join 15+ brands scaling with NEXGRO</p>
+            </div>
+          </div>
+          <div class="bg-surface-container-high p-10 rounded-sm">
+            <form class="flex flex-col gap-6">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="flex flex-col gap-2">
+                  <label class="text-[10px] uppercase tracking-widest text-on-surface-variant font-bold">Full
+                    Name</label>
+                  <input
+                    class="bg-transparent border-0 border-b border-outline-variant/30 focus:border-primary-container focus:ring-0 text-white placeholder:text-white/20 transition-all py-3"
+                    placeholder="John Doe" type="text" />
+                </div>
+                <div class="flex flex-col gap-2">
+                  <label class="text-[10px] uppercase tracking-widest text-on-surface-variant font-bold">Brand
+                    Name</label>
+                  <input
+                    class="bg-transparent border-0 border-b border-outline-variant/30 focus:border-primary-container focus:ring-0 text-white placeholder:text-white/20 transition-all py-3"
+                    placeholder="My Cool Brand" type="text" />
+                </div>
+              </div>
+              <div class="flex flex-col gap-2">
+                <label class="text-[10px] uppercase tracking-widest text-on-surface-variant font-bold">Email
+                  Address</label>
+                <input
+                  class="bg-transparent border-0 border-b border-outline-variant/30 focus:border-primary-container focus:ring-0 text-white placeholder:text-white/20 transition-all py-3"
+                  placeholder="john@brand.com" type="email" />
+              </div>
+              <div class="flex flex-col gap-2">
+                <label class="text-[10px] uppercase tracking-widest text-on-surface-variant font-bold">WhatsApp
+                  Number</label>
+                <input
+                  class="bg-transparent border-0 border-b border-outline-variant/30 focus:border-primary-container focus:ring-0 text-white placeholder:text-white/20 transition-all py-3"
+                  placeholder="+91 99887 76655" type="tel" />
+              </div>
+              <div class="flex flex-col gap-2">
+                <label class="text-[10px] uppercase tracking-widest text-on-surface-variant font-bold">Desired
+                  Service</label>
+                <select
+                  class="bg-transparent border-0 border-b border-outline-variant/30 focus:border-primary-container focus:ring-0 text-white transition-all py-3">
+                  <option class="bg-surface-container-high">Shopify Store Development</option>
+                  <option class="bg-surface-container-high">Performance Marketing</option>
+                  <option class="bg-surface-container-high">Automation &amp; Chatbots</option>
+                  <option class="bg-surface-container-high">Full Growth Package</option>
+                </select>
+              </div>
+              <button
+                class="w-full py-4 mt-4 bg-primary-container text-on-primary font-black uppercase tracking-[0.2em] rounded-sm hover:brightness-110 active:scale-[0.98] transition-all"
+                type="submit">
+                Send Audit Request
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- Footer -->
+  <footer class="bg-[#0E0E0E] w-full py-20 px-8 tonal-shift bg-[#1B1B1B]">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-12 max-w-7xl mx-auto">
+      <div class="md:col-span-1">
+        <div class="flex items-center gap-2 mb-4">
+          <img alt="NEXGRO Logo" class="h-6 w-auto" data-alt="NEXGRO company logo in white on dark background"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBDHqUEel6WBbaa5TwOwB_cKStrDVga0KLbcmydMbeXG01PPh4N9xqMADhEO64IjAuG7fvSJ4EWshsPdYyfvtEfMR2UEpf76v_FM3R64KaBow_wOmAClH6jJCV8ao92VSVpwip-cW-Mfd6AN64ezAAlj0xMX5zyVFvFd0bCs3597M01zhDReMhGtXL3LqSS98L4EBwprJg2EGeNJmLyJt_SIRpsmnE9FnSosFLy6YzNBEmm25J-BgC6wNNjP5J5O_6BWCYFuS6-j6C" />
+          <span class="text-3xl font-black text-white">NEXGRO</span>
+        </div>
+        <p class="text-white/40 text-sm leading-relaxed max-w-xs">
+          Building the future of D2C commerce through high-performance digital experiences.
+        </p>
+      </div>
+      <div>
+        <h6 class="text-[#E8FF00] font-['Inter'] text-xs uppercase tracking-widest mb-8">Navigation</h6>
+        <ul class="flex flex-col gap-4">
+          <li><a
+              class="text-white/40 hover:text-[#E8FF00] transition-colors font-['Inter'] text-xs uppercase tracking-widest"
+              href="#">Our Work</a></li>
+          <li><a
+              class="text-white/40 hover:text-[#E8FF00] transition-colors font-['Inter'] text-xs uppercase tracking-widest"
+              href="#">Services</a></li>
+          <li><a
+              class="text-white/40 hover:text-[#E8FF00] transition-colors font-['Inter'] text-xs uppercase tracking-widest"
+              href="#">Process</a></li>
+        </ul>
+      </div>
+      <div>
+        <h6 class="text-[#E8FF00] font-['Inter'] text-xs uppercase tracking-widest mb-8">Legal</h6>
+        <ul class="flex flex-col gap-4">
+          <li><a
+              class="text-white/40 hover:text-[#E8FF00] transition-colors font-['Inter'] text-xs uppercase tracking-widest"
+              href="#">Privacy Policy</a></li>
+          <li><a
+              class="text-white/40 hover:text-[#E8FF00] transition-colors font-['Inter'] text-xs uppercase tracking-widest"
+              href="#">Terms of Service</a></li>
+        </ul>
+      </div>
+      <div>
+        <h6 class="text-[#E8FF00] font-['Inter'] text-xs uppercase tracking-widest mb-8">Connect</h6>
+        <div class="flex gap-4">
+          <a class="w-10 h-10 flex items-center justify-center border border-white/10 text-white/40 hover:text-[#E8FF00] hover:border-[#E8FF00] transition-all"
+            href="#">
+            <span class="material-symbols-outlined text-sm">share</span>
+          </a>
+          <a class="w-10 h-10 flex items-center justify-center border border-white/10 text-white/40 hover:text-[#E8FF00] hover:border-[#E8FF00] transition-all"
+            href="#">
+            <span class="material-symbols-outlined text-sm">mail</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="max-w-7xl mx-auto px-8 mt-20 pt-8 border-t border-white/5">
+      <p class="text-white/40 font-['Inter'] text-[10px] uppercase tracking-[0.3em]">
+        © 2026 NEXGRO. All rights reserved. Built for the global scale.
+      </p>
+    </div>
+  </footer>
+  <script>
     const btn = document.getElementById('mobile-menu-btn');
     const menu = document.getElementById('mobile-menu');
     if (btn && menu) {
-        btn.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
-        });
+      btn.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+      });
     }
-</script>
+  </script>
 
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    // 1. Navbar and Standalone CTA logic
-    const buttons = document.querySelectorAll('button, a');
-    buttons.forEach(btn => {
-      const text = btn.textContent.toLowerCase().split(' ').filter(x => x).join(' ');
-      if (
-        text.includes('get free audit') || 
-        text.includes('get audit') || 
-        text.includes('book free discovery call') || 
-        text.includes('start your project')
-      ) {
-        btn.addEventListener('click', (e) => {
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Navbar and Standalone CTA logic
+      const buttons = document.querySelectorAll('button, a');
+      buttons.forEach(btn => {
+        const text = btn.textContent.toLowerCase().split(' ').filter(x => x).join(' ');
+        if (
+          text.includes('get free audit') ||
+          text.includes('get audit') ||
+          text.includes('book free discovery call') ||
+          text.includes('start your project')
+        ) {
+          btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const form = document.getElementById('audit-form');
+            if (form) {
+              form.scrollIntoView({ behavior: 'smooth' });
+            } else {
+              window.open('https://wa.me/916363690485?text=' + encodeURIComponent("Hi Nexgro! 👋 I'm interested in growing my brand. Can we talk?"), '_blank');
+            }
+          });
+        }
+      });
+
+      // 2. Form submission logic
+      const auditForm = document.getElementById('audit-form');
+      if (auditForm) {
+        const newForm = auditForm.cloneNode(true);
+        auditForm.parentNode.replaceChild(newForm, auditForm);
+
+        newForm.addEventListener('submit', function (e) {
           e.preventDefault();
-          const form = document.getElementById('audit-form');
-          if (form) {
-            form.scrollIntoView({ behavior: 'smooth' });
-          } else {
-            window.open('https://wa.me/916363690485?text=' + encodeURIComponent("Hi Nexgro! 👋 I'm interested in growing my brand. Can we talk?"), '_blank');
-          }
-        });
-      }
-    });
 
-    // 2. Form submission logic
-    const auditForm = document.getElementById('audit-form');
-    if (auditForm) {
-      const newForm = auditForm.cloneNode(true);
-      auditForm.parentNode.replaceChild(newForm, auditForm);
-      
-      newForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        let isValid = true;
-        newForm.querySelectorAll('.error-msg').forEach(el => el.remove());
-        
-        const inputs = [
-          { id: 'form-name', name: 'Name' },
-          { id: 'form-brand', name: 'Brand' },
-          { id: 'form-email', name: 'Email' },
-          { id: 'form-whatsapp', name: 'WhatsApp' },
-          { id: 'form-service', name: 'Service Needed', isSelect: true }
-        ];
-        
-        const formData = {};
+          let isValid = true;
+          newForm.querySelectorAll('.error-msg').forEach(el => el.remove());
 
-        inputs.forEach(field => {
-          const el = newForm.querySelector('#' + field.id);
-          if (el) {
-             const val = el.value.trim();
-             if (field.isSelect && el.options) {
+          const inputs = [
+            { id: 'form-name', name: 'Name' },
+            { id: 'form-brand', name: 'Brand' },
+            { id: 'form-email', name: 'Email' },
+            { id: 'form-whatsapp', name: 'WhatsApp' },
+            { id: 'form-service', name: 'Service Needed', isSelect: true }
+          ];
+
+          const formData = {};
+
+          inputs.forEach(field => {
+            const el = newForm.querySelector('#' + field.id);
+            if (el) {
+              const val = el.value.trim();
+              if (field.isSelect && el.options) {
                 formData[field.name] = val ? el.options[el.selectedIndex].text : val;
-             } else {
+              } else {
                 formData[field.name] = val;
-             }
-             
-             if (!val) {
-               isValid = false;
-               const errorEl = document.createElement('span');
-               errorEl.className = 'error-msg text-red-500 text-xs mt-1 absolute bottom-[-20px]';
-               errorEl.style.color = '#ef4444';
-               errorEl.style.fontSize = '12px';
-               errorEl.textContent = 'This field is .';
-               
-               if (el.parentElement) {
-                  el.parentElement.style.position = 'relative'; 
+              }
+
+              if (!val) {
+                isValid = false;
+                const errorEl = document.createElement('span');
+                errorEl.className = 'error-msg text-red-500 text-xs mt-1 absolute bottom-[-20px]';
+                errorEl.style.color = '#ef4444';
+                errorEl.style.fontSize = '12px';
+                errorEl.textContent = 'This field is .';
+
+                if (el.parentElement) {
+                  el.parentElement.style.position = 'relative';
                   el.parentElement.appendChild(errorEl);
-               }
-             }
-          }
-        });
+                }
+              }
+            }
+          });
 
-        const textarea = newForm.querySelector('textarea');
-        let messageVal = textarea ? textarea.value.trim() : '';
+          const textarea = newForm.querySelector('textarea');
+          let messageVal = textarea ? textarea.value.trim() : '';
 
-        if (isValid) {
-          const message = `Hi Nexgro! 👋
+          if (isValid) {
+            const message = `Hi Nexgro! 👋
 New Audit Request:
 Name: ${formData['Name']}
 Brand: ${formData['Brand']}
@@ -569,13 +631,16 @@ WhatsApp: ${formData['WhatsApp']}
 Service Needed: ${formData['Service Needed']}
 Message: ${messageVal}
 Looking forward to connecting!`;
-          
-          const encodedMessage = encodeURIComponent(message);
-          const whatsappUrl = `https://wa.me/916363690485?text=${encodedMessage}`;
-          window.open(whatsappUrl, '_blank');
-        }
-      });
-    }
-  });
-</script>
-\n</body></html>
+
+            const encodedMessage = encodeURIComponent(message);
+            const whatsappUrl = `https://wa.me/916363690485?text=${encodedMessage}`;
+            window.open(whatsappUrl, '_blank');
+          }
+        });
+      }
+    });
+  </script>
+  \n
+</body>
+
+</html>
